@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+	<style type="text/css">
+		.mouse-region{
+			border: 1px solid red;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="myapp">
+		Please see the result in the console. <br><br>
+		<input type="text" placeholder="Key press..." @keypress="keyPress"><br><br>
+		<input type="text" placeholder="Key up..." @keyup="keyUp"><br><br>
+		<input type="text" placeholder="Key down..." @keydown="keyDown"><br><br>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
