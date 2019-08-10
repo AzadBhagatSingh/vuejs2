@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+	<style type="text/css">
+		.userImg{
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="myapp">
+		<!-- v-bind for html attribute and class binding -->
+		<!-- shorthand of v-bind is : orpertor -->
+		<img :src="imageLink" :class="{userImg:isActive}"><br>
+		<!-- v-bind for html attribute -->
+		<a v-bind:href="ulink" v-bind:title="title">{{ name }}</a>
+		<!-- html input binding with form -->
+		<br>html input binding.
+		<form method="post">
+			<input type="text" v-bind:value="txtName">
+			<input type="text" v-bind:value="txtEmail">
+			<button type="button">Submit</button>
+		</form>
+		<br>
+		html content binding.
+		<div v-html="htmlContent">
+			
+		</div>
+	</div>
+</body>
+<script src="app.js"></script>
+</html>
