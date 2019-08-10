@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+	<style type="text/css">
+		.mouse-region{
+			border: 1px solid red;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="myapp">
+		<div class="mouse-region" @mousemove="mouseMove">
+			<span>{{ x }},{{ y }}</span>
+		</div>
+		<br><br>
+		<button @mouseover="mouseOver" @mouseout="moouseOut">{{ btnText }}</button>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
