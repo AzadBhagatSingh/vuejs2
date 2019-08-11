@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myapp">
+		<h1>Counter: {{ counter }}</h1>
+		<!-- once event modifier -->
+		<button @click.once="incrementBYOne">Increment</button><br><br>
+		<!-- prevent event modifier -->
+		<a href="https://www.google.com" @click.prevent>Google</a><br><br>
+
+		<form action="#" method="post" @submit.prevent> 
+			<button type="submit">Submit</button>
+		</form>
+
+		<!-- stop event modifier -->
+		Please see the console...
+		<div id="parent-div" @click="submitClick">
+			<button id="child" @click.stop="submitClick">Click me</button>
+		</div>
+		<br>
+		<!-- capture event modifier -->
+		<div id="" @click.capture="parentDiv">
+			<button @click="buttonClick">Click me again</button>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
