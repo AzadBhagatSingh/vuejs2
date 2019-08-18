@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myapp">
+		<h1>Key modifier example. See output in console</h1>
+		<!-- keypress modifier -->
+		<input type="text" @keypress="keypressFunction"><br><br>
+		<!-- keypress with enter key modifier -->
+		Press any key + enter
+		<input type="text" @keyup.enter="keypressFunction"><br><br>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
